@@ -1,0 +1,12 @@
+table {
+    border: 1px solid gray;
+    border-bottom:0px;
+}
+
+thead {
+    background-color:silver;
+}
+
+td {
+    border-bottom:1px dotted black;
+}

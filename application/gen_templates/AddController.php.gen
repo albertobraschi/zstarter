@@ -1,0 +1,25 @@
+<?php
+
+class ${moduleName}_AddController extends AuthControllerAction {
+
+    public function indexAction() {
+        $cnf = Zend_Registry::get('cnf');
+        $model = new ${moduleName}Model();
+        $this->view->form_action="{$cnf->url->fullurl}${moduleName}/edit/insert/";
+        {$opt_funcs}
+    }
+
+    public function insertAction() {
+        $cnf = Zend_Registry::get('cnf');
+        $model = new ${moduleName}Model();
+        $data = array(  );
+
+        if ($this->_request->isPost() && $this->_request->getPost('f_insert_submit')) {
+            {$data_posts}
+            //array_shift($data);
+            $model->insert($data);
+            $this->sendMessage("element has been added successfully", "add", $cnf->url->fullurl."${moduleName}/");
+        }
+
+    }
+}

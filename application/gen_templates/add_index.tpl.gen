@@ -1,0 +1,11 @@
+<?php if (!isset($this->error)): ?>
+<div class="header"><h3>Add item</h3></div>
+<form action="<?php print $this->form_action; ?>" name="f_insert" method="post">
+<table border="0" cellspacing="0" cellspading="0">
+{$fields}
+<tr><td></td><td><br/><input type="submit" name="f_insert_submit" value="Insert"/></td></tr>
+</form>
+</table>
+<?php else: ?>
+<?php print $this->error; ?>
+<?php endif; ?>

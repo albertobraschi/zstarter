@@ -1,0 +1,31 @@
+<?php
+
+class ${moduleName}_EditController extends AuthControllerAction {
+
+    public function indexAction() {
+        $cnf = Zend_Registry::get('cnf');
+        $model = new ${moduleName}Model();
+        $id = $this->_request->getParam('id');
+        if (isset($id)) {
+            $this->view->item=$model->getItem($id);
+            $this->view->form_action="{$cnf->url->fullurl}${moduleName}/edit/update/";
+            {$opt_funcs}
+        } else {
+            //$this->view->error="no item selected";
+            $this->sendMessage("no item selected", "edit", $cnf->url->fullurl."${moduleName}/");
+        }
+    }
+
+    public function updateAction() {
+        $cnf = Zend_Registry::get('cnf');
+        $model = new ${moduleName}Model();
+
+        $data = array(  );
+
+        if ($this->_request->isPost() && $this->_request->getPost('f_update_submit')) {
+            {$data_posts}
+            $model->update($data);
+            $this->sendMessage("element '{$data['ID']}' has been updated successfully", "edit", $cnf->url->fullurl."${moduleName}/");
+        }
+    }
+}

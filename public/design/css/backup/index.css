@@ -1,0 +1,15 @@
+tr.sd:hover td {
+    background-color:silver;
+}
+
+div.select_files {
+    height:300px;
+    width:300px;
+    overflow-y:scroll;
+    border:1px solid silver;
+    padding:5px;
+}
+
+input.textfield {
+    width:300px;
+}

@@ -1,0 +1,12 @@
+<?php if (!isset($this->error)): ?>
+<?php $item=$this->item; ?>
+<div class="header"><h3>Edit item "<?php print $item['ID'] ?>"</h3></div>
+<form action="<?php print $this->form_action; ?>" name="f_update" method="post">
+<table border="0" cellspacing="0" cellspading="0">
+{$fields}
+<tr><td></td><td><br/><input type="submit" name="f_update_submit" value="Save"/><input type="button" name="f_delete" value="Delete"/></td></tr>
+</form>
+</table>
+<?php else: ?>
+<?php print $this->error; ?>
+<?php endif; ?>

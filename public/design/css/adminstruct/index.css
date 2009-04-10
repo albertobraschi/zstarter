@@ -1,0 +1,12 @@
+table.t_view {
+    border: 1px solid gray;
+    border-bottom:0px;
+}
+
+table.t_view thead {
+    background-color:silver;
+}
+
+table.t_view td {
+    border-bottom:1px dotted black;
+}

@@ -1,0 +1,28 @@
+<?php if (isset($this->notemplate)): ?>
+<?php print $this->layout()->content; ?>
+<?php else: ?>
+<html>
+<head>
+<title>Kurvazone</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="http://taryk/admin/public/design/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<?php if ($this->head_link2) { print $this->head_link2; } ?>
+<?php print $this->jQuery()->enable(); ?>
+<?php if ($this->head_script2) { print $this->head_script2; } ?>
+<script language="javascript" src="http://taryk/admin/public/design/js/script.js"></script>
+</head>
+<body>
+<div id="top"><?php print $this->top; ?></div>
+<div id="content">
+    <div id="menu">
+        <?php if (isset($this->user)) { ?>Hello, <?php print $this->user->Username ?>!<br /><br /><?php } ?>
+        <?php foreach($this->mainmenu as $item): ?>
+        <a href="<?php print $this->fullurl.$item['Link']; ?>" alt="<?php print $item['Description']; ?>"><?php print $item['Name']; ?></a><br />
+        <?php endforeach; ?>
+    </div>
+    <div id="main"><?php print $this->layout()->content; ?></div>
+</div>
+<div id="bottom"><?php print $this->bottom; ?></div>
+</body>
+</html>
+<?php endif; ?>

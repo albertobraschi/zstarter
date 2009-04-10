@@ -1,0 +1,1 @@
+<h1><?php print $this->text ?></h1>

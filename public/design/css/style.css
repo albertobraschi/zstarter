@@ -1,0 +1,156 @@
+body {
+    margin:0px;
+    font-family:Verdana;
+}
+div#top {
+    height:70px;
+    background-color:silver;
+    padding:5px;
+    margin:0px;
+    margin-left:250px;
+}
+
+div#content div#menu {
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:230px;
+    padding:5px;
+    height:100%;
+}
+
+div#content div#main {
+    margin-left:250px;
+    border:1px dotted silver;
+    padding:5px;
+}
+
+div#bottom {
+    margin-left:250px;
+    margin-top:10px;
+}
+
+span.link {
+    font-family:monospace;
+    font-size:20px;
+    color: blue;
+    cursor:pointer;
+}
+
+table.s3table thead tr {
+    background-color:#B8B8B8;
+}
+
+table.s3table thead tr th {
+    border-bottom:1px solid #949494;
+    border-left:1px solid white;
+}
+
+table.s3table td,th {
+    padding:5px;
+}
+
+tr.odd {
+    background-color:#EEEEEE;
+}
+
+tr.even {
+    background-color:#DFDFDF;
+}
+
+tr.odd td, tr.even td  {
+    vertical-align:top;
+    border-left:1px solid white;
+}
+
+table.s3table {
+    border: 1px solid #949494;
+}
+
+div.header {
+    background-color:silver;
+    width:100%;
+    padding:5px;
+    margin-bottom:20px;
+}
+
+div.header h3 {
+    margin:0px;
+}
+
+div#content div#menu div#left_toolbar {
+    position:absolute;
+    left:0px;
+    width:20px;
+    height:100%;
+    border-right:1px solid silver;
+}
+
+div#content div#menu div#left_menu {
+    position:absolute;
+    left:25px;
+}
+
+div.hello {
+    height:80px;
+    width:200px;
+    border-bottom:1px dotted silver;
+}
+
+div.message {
+    width:100%;
+    border:1px solid green;
+    padding:5px;
+    margin-bottom:15px;
+    padding-left:30px;
+    background-color:#B9DFA5;
+    background-image:url(http://taryk/admin/public/design/img/s_success.png);
+    background-position:10px 50%;
+    background-repeat:no-repeat;
+}
+
+td img {
+    margin:5px;
+}
+
+td input {
+    margin:5px;
+}
+
+table.t_view {
+    border: 1px solid gray;
+    border-bottom:0px;
+}
+
+table.t_view thead {
+    background-color:silver;
+}
+
+table.t_view td {
+    border-bottom:1px dotted black;
+}
+
+div.menuModule {
+    background-color:#848484;
+    color:#ffffff;
+    font-weight:bold;
+    padding:3px;
+    border-bottom:1px solid white;
+}
+
+div.menuSub {
+    background-color:#D9D9D9;
+    color:#848484;
+    padding:3px;
+    display:none;
+}
+
+div.menuSub a {
+    color:#515151;
+    text-decoration:none;
+}
+
+div.menuSub a:hover {
+    color:#989898;
+    background-color:#BFBFBF;
+}
